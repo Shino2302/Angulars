@@ -1,0 +1,27 @@
+Directivas de Angular:
+  Las directivas son extenciones de las etiquetas HTML que nos permiten darle las funcionalidades deseadas a nuestra página
+  por ejemplo:
+    '<div ng-app="">' : la directiva ng-app nos dice donde inicializa una aplicación de Angular
+  
+  Una lista de estas con sus descripciones:
+    - ng-init="variable=''"; esta nos permite inicializar variables, valores u objetos desde el principio del programa (no es muy utulizada).
+    - ng-model=""; vincula el valor de los controles HTML (entrada, selección, área de texto) a los datos de la aplicación.
+    - ng-repeat="x in array/list"; repite un elemento HTML. (Es muy parecida a un foreach).
+
+  - Angular nos permite crear nuestrar propias directivas, utlizando la funcion '.directive'
+    Nota! es necesario utilizar '-' para separar el nombre de nuestra directiva y poder utilizarla en nuestro HTML
+    un ejemplo:
+    <body ng-app="myApp">
+      <w3-test-directive></w3-test-directive>
+      <script>
+        var app = angular.module("myApp", []);
+        app.directive("w3TestDirective", function() {
+        return {
+          template : "<h1>Made by a directive!</h1>"
+          };
+        });
+      </script>
+    </body>
+    Nota 2! estas tambien pueden ser llamadas como atributo de las etiquetas o como clase
+    
+    Nota 3! Si lo deseamos podemos restringir nuestras directivas para que solo seab invocadas por algunos de los metodos

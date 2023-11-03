@@ -1,0 +1,4 @@
+Ng-model nos permiter realizar muchas cosas.
+Nos de permite manejar estados, clases de CSS, Validaciones.
+
+recuerda, esta directiva es muy importante y necesario saber cuando es bueno utilizarla

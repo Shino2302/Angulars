@@ -8,9 +8,11 @@
 </head>
 <body>
   <!--Arreglo de toda la vida-->
-  <div ng-app="" ng-init="array=[1,15,20,25]">
-    <h2>posicio 0 en el array  <span ng-bind="array[0]""></span></h2>
+  <div ng-app="" ng-init="array=[1,15,20,25,26]">
+    <h2>posicio 0 en el array  <span ng-bind="array[0]"></span></h2>
     <h2>posicion 1 en el array = {{array[1]}}</h2>
+    <!--El ng-repeat es un foreach.-->
+    <h2 ng-repeat="x in array">{{x}}</h2>
   </div>
 </body>
 </html>

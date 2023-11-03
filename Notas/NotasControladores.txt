@@ -1,0 +1,12 @@
+Controladores:
+
+  - Los controladores en Angular CONTROLAN los datos de las aplicaciones,
+    estos son objetos de js normales.
+
+  - Estos se aplican mediante la directiva ng-controller.
+
+  - Un objeto controlador puede tener metodos como variables, permitiendonos realizar cambios o hacer operaciones al activar eventos.
+
+  - Estos pueden ser invocados desde cualquier archivo JS, o desde scripts locales de la vista.
+
+   Ultimo leido: https://www.w3schools.com/angular/angular_filters.asp
