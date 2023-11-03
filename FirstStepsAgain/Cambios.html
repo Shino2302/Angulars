@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <title>Segunda p&acute;gina</title>
+</head>
+<body>
+  <!--Ejemplo de una aplicacion sencilla con Angular:-->
+  <!--Aquí indicamos el nombre de nuestra app de Angular y seguido de esto indicamos que tendra un controlador en esta seccion: -->
+  <div ng-app="myApp" ng-controller="myController">
+    Nombre: <input type="text" ng-model="primerNombre"><br>
+    Apellido <input type="text" ng-model="apellidoPaterno"><br>
+    Nombre completo = {{primerNombre + " " + apellidoPaterno}}
+  </div>
+  <!--En este script inicializamos los valores que aparecen en nuetro input-->
+  <!--Tomandolo desde los ng-model-->
+  <script>
+    //Indicamos que tenemos un modulo de angular: 
+    var app = angular.module('myApp',[]);
+    //indicamos el uso de nuestro controlador: 
+    app.controller('myController',function($scope){
+      $scope.primerNombre = 'Sigfrido';
+      $scope.apellidoPaterno = 'Encinas';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Script enlazando la "API" de angular-->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <title>My First Angular</title>
+</head>
+<body>
+  <!--Con la etiqueta ng-app indicamos que es una aplicacion de Angulas.JS-->
+  <div ng-app="">
+    <!--Declaramos un model para poder consumirlo desde otra parte de nuestro código-->
+    <p>Name:<input type="text" ng-model="name"></p>
+    <!--Desde nuestro bind indicando el modelo podemos cambiar las propiedades del DOM en tiempo real-->
+    <p ng-bind="name"></p>
+
+    <!-- Directivas de Angular: Las directivas de angular son atributos HTML con la propiedad ng-"algo" -->
+    <!--ng-init inicializa variables. Ejemplo: -->
+    <div ng-init="unNombre='Shino'">
+      <p> ¿Tu nombre es? ¿<span ng-bind="unNombre"></span>? </p>
+    </div>
+    <!--Expresiones en AngularJS: las expresiones se escriben con llaves dobles {{}}-->
+    <!--Ejemplo: -->
+    <div>
+      <h2>Dame un n&uacute;mero: <input type="number" ng-model="numero1"></h2>
+      <h2>Dame otro: <input type="number" ng-model="numero2"></h2>
+      <h3>                                                                          <!--aquí en las directivas podrian ser numeros o datos simples sin necesidad de utilizar variables o modelos-->
+        La suma es <span ng-bind="numero1"></span> + <span ng-bind="numero2"></span> = {{numero1 + numero2}}
+      </h3>
+    </div>
+    <input type="button" src="/FirstStepsAgain/Cambios.html">
+  </div>
+</body>
+</html>

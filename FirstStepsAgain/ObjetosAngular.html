@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <title>Creacion de objetos en Angular</title>
+</head>
+<body>
+  <!--Los objetos se generan de la misma forma que en JS o en TS-->
+  <div ng-app="" ng-init="Persona={Nombre:'Shino', Apellido:'Encinas', Correo:'encinas.sigfrido.cbtis37@gmail.com'}">
+    <!--Pueden ser utilizados desde expresiones: -->
+    <h3>Quieres saber sobre {{Persona.Nombre + " " +Persona.Apellido}}?</h3>
+    <!--O desde bind's: -->
+    <h3>Lo unico que encontramos es su correo:<span ng-bind="Persona.Correo"></span><h3>
+  </div>
+</body>
+</html>
